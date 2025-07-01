@@ -92,58 +92,6 @@ public interface TransactionMapper {
     })
     int insert(Transaction transaction);
 
-//    @Update({
-//            "<script>",
-//            "UPDATE transactions",
-//            "<set>",
-//            "  <if test='remitterAccount != null'>remitter_account = #{transaction.remitterAccount},</if>",
-//            "  <if test='fromCurrency != null'>from_currency = #{transaction.fromCurrency},</if>",
-//            "  <if test='fromAmount != null'>from_amount = #{transaction.fromAmount},</if>",
-//            "  <if test='beneficiaryAccount != null'>beneficiary_account = #{transaction.beneficiaryAccount},</if>",
-//            "  <if test='toCurrency != null'>to_currency = #{transaction.toCurrency},</if>",
-//            "  <if test='toAmount != null'>to_amount = #{transaction.toAmount},</if>",
-//            "  <if test='exchangeRate != null'>exchange_rate = #{transaction.exchangeRate},</if>",
-//            "  <if test='feeCurrency != null'>fee_currency = #{transaction.feeCurrency},</if>",
-//            "  <if test='fee != null'>fee = #{transaction.fee},</if>",
-//            "  <if test='transactionStatus != null'>transaction_status = #{transaction.transactionStatus},</if>",
-//            "  <if test='transactionType != null'>transaction_type = #{transaction.transactionType},</if>",
-//            "  <if test='updatedAt != null'>updated_at = #{transaction.updatedAt},</if>",
-//            "  <if test='updatedUser != null'>updated_user = #{transaction.updatedUser},</if>",
-//            "  <if test='deletedAt != null'>deleted_at = #{transaction.deletedAt},</if>",
-//            "  <if test='deletedUser != null'>deleted_user = #{transaction.deletedUser},</if>",
-//            "  <if test='comments != null'>comments = #{transaction.comments},</if>",
-//            "</set>",
-//            "WHERE transaction_id = #{transaction.transactionId} AND updated_at = #{lastUpdatedAt} </script>"
-//    })
-//
-//    @Update({
-//            "<script>",
-//            "UPDATE transactions",
-//            "<set>",
-//            "  <if test='transaction.remitterAccount != null'>remitter_account = #{transaction.remitterAccount},</if>",
-//            "  <if test='transaction.fromCurrency != null'>from_currency = #{transaction.fromCurrency},</if>",
-//            "  <if test='transaction.fromAmount != null'>from_amount = #{transaction.fromAmount},</if>",
-//            "  <if test='transaction.beneficiaryAccount != null'>beneficiary_account = #{transaction.beneficiaryAccount},</if>",
-//            "  <if test='transaction.toCurrency != null'>to_currency = #{transaction.toCurrency},</if>",
-//            "  <if test='transaction.toAmount != null'>to_amount = #{transaction.toAmount},</if>",
-//            "  <if test='transaction.exchangeRate != null'>exchange_rate = #{transaction.exchangeRate},</if>",
-//            "  <if test='transaction.feeCurrency != null'>fee_currency = #{transaction.feeCurrency},</if>",
-//            "  <if test='transaction.fee != null'>fee = #{transaction.fee},</if>",
-//            "  <if test='transaction.transactionStatus != null'>transaction_status = #{transaction.transactionStatus},</if>",
-//            "  <if test='transaction.transactionType != null'>transaction_type = #{transaction.transactionType},</if>",
-//            "  <if test='transaction.updatedAt != null'>updated_at = #{transaction.updatedAt},</if>",
-//            "  <if test='transaction.updatedUser != null'>updated_user = #{transaction.updatedUser},</if>",
-//            "  <if test='transaction.deletedAt != null'>deleted_at = #{transaction.deletedAt},</if>",
-//            "  <if test='transaction.deletedUser != null'>deleted_user = #{transaction.deletedUser},</if>",
-//            "  <if test='transaction.comments != null'>comments = #{transaction.comments},</if>",
-//            "</set>",
-//            "WHERE transaction_id = #{transaction.transactionId} AND updated_at = #{lastUpdatedAt}",
-//            "</script>"
-//    })
-//    int update(@Param("transaction") Transaction transaction, @Param("lastUpdatedAt") LocalDateTime lastUpdatedAt);
-
-
-
     @Update({
             "<script>",
             "UPDATE transactions",
