@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+spring.h2.console:
+  enabled: true
+  path: /h2-console
+
+mybatis.type-aliases-package: com.demo.lyy.model.entity
+#springdoc.swagger-ui.path: "/swagger-ui.html"
+springdoc.swagger-ui.enabled: true
+logging.level.root: INFO
+logging.level.com.demo.lyy: DEBUG
+logging.pattern.console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
